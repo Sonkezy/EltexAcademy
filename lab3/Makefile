@@ -15,3 +15,7 @@ main3 : main3.c
 
 main4 : main4.c
 	$(CC) $(CFLAGS) -o $@ $<
+
+.PHONY: clean
+clean: main1 main2 main3 main4
+	rm -rf $^ 
